@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: #185e7d;
+}
+h1 {
+    margin: 0;
+}
+nav {
+    background-color: #06101a;
+    
+
+    display: flex; /* Makes the nav a flex parent */
+    justify-content: space-between; /* Separates items to opposite ends */
+    width: 100%;
+    align-items: center; /* Vertically centers the items */
+}
+
+nav button {
+    background-color: #06101a;
+    color: #185e7d;
+    border: #b9312f solid;
+    border-radius: 25%;
+    padding: 10px 20px; /* Add some padding to make it more clickable */
+    font-size: 16px; /* Adjusts text size */
+    cursor: pointer;
+}
+.discover-button button {
+    display: inline-flex; /* Allows aligning items inside the button */
+    align-items: center;  /* Vertically aligns the icon and text */
+    gap: 8px; /* Adds some space between the text and the icon */
+}
+section.first {
+    background-image: url('../images/waves.jpg');
+    background-size: cover; /* Ensures the background image covers the section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    width: 100%; /* Ensures the section takes the full width of the body */
+    min-height: 100vh; /* Ensures the section covers at least the full height of the viewport */
+    padding: 50px 0; /* Adds vertical padding for spacing */
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Align content in a column */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers the text inside the section */
+
+   
+}
+.bungee-tint-regular {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Styling for name-image section */
+.first .name-image {
+    font-family: "Bungee Tint", sans-serif;
+    color: #29637f;
+    text-shadow: 1px 1px 2px #185e7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the value to control the space between name and image */
+
+    
+}
+.first .name-image .name-heading {
+    font-size: 80px;
+}
+
+/* Styling for the profile image */
+.profile-image {
+    border-radius: 20%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+  'vertical-align' middle /* Aligns the icon properly with the text */
+}
+.first button {
+    background-color: #06101a;
+    color: #185e7d;
+    border: #b9312f solid;
+
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+footer {
+    background-color: #06101a;
+    color: #185e7d;
+    height: 30%;
+}
