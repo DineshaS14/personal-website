@@ -1,29 +1,75 @@
 body {
     margin: 0;
-    background-color: #185e7d;
+    background-color: #06101a;
+    
+}
+section {
+    font-size: 1.1em;
+    color: #185e7d;
+    text-shadow: 0.5px 0.5px 0.5px rgb(247, 247, 247); /* Red shadow effect on text */
 }
 h1 {
     margin: 0;
 }
-nav {
-    background-color: #06101a;
-    
 
-    display: flex; /* Makes the nav a flex parent */
-    justify-content: space-between; /* Separates items to opposite ends */
-    width: 100%;
-    align-items: center; /* Vertically centers the items */
+h2 {
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 50px;
+    
+}
+/* Style the GitHub icon */
+.github-icon {
+    color: #185e7d; /* GitHub's traditional black color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-nav button {
+/* Style the LinkedIn icon */
+.linkedin-icon {
+    color: #185e7d; /* LinkedIn's official blue color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effects */
+.github-icon:hover,
+.linkedin-icon:hover {
+    color: #b9312f; /* Changes to a different color when hovered */
+}
+
+/* Styling for the button to remove borders, background, etc. */
+button {
+    background-color: transparent; /* Make button background transparent */
     background-color: #06101a;
     color: #185e7d;
-    border: #b9312f solid;
+    box-shadow: 0 4px 8px #b9312f;
     border-radius: 25%;
-    padding: 10px 20px; /* Add some padding to make it more clickable */
-    font-size: 16px; /* Adjusts text size */
-    cursor: pointer;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 10px; /* Adjust padding to make the buttons clickable */
 }
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Styling for the anchor tag to remove underline */
+nav a {
+    text-decoration: none; /* Remove underline from the links */
+}
+
+/* Make the icons more clickable */
+nav a i {
+    font-size: 24px; /* Adjust icon size if needed */
+    padding: 5px; /* Adds space around the icons */
+}
+
+/* Optional: Add a hover effect to the button itself */
+button:hover {
+    opacity: 0.8; /* Slightly reduce the opacity when hovered */
+    color: #b9312f;
+}
+
 .discover-button button {
     display: inline-flex; /* Allows aligning items inside the button */
     align-items: center;  /* Vertically aligns the icon and text */
@@ -61,7 +107,7 @@ section.first {
 .first .name-image {
     font-family: "Bungee Tint", sans-serif;
     color: #29637f;
-    text-shadow: 1px 1px 2px #185e7d;
+    text-shadow: 2px 2px 2px #010406;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,11 +116,18 @@ section.first {
     
 }
 .first .name-image .name-heading {
-    font-size: 80px;
+    font-size: 100px;
 }
 
 /* Styling for the profile image */
 .profile-image {
+    border-radius: 20%;
+    box-shadow: 0 4px 8px #b9312f;
+}
+.image-div-of-name-image {
+    border: 5px solid; /* Border around the image */
+    border-image: linear-gradient(45deg, #185e7d, #06101a) 1; /* Diagonal gradient border */
+    object-fit: cover; /* Ensures the image scales properly inside the rounded border */  
     border-radius: 20%;
 }
 .material-symbols-outlined {
@@ -88,13 +141,267 @@ section.first {
 .first button {
     background-color: #06101a;
     color: #185e7d;
-    border: #b9312f solid;
+    box-shadow: 0 4px 8px #b9312f;
+    border-radius: 25%;
+    padding: 10px 20px; /* Add some padding to make it more clickable */
+    font-size: 16px; /* Adjusts text size */
+    cursor: pointer;
 
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
 }
+.first button:hover {
+    color: #b9312f;
+}
+.whole-education-container {
+    box-shadow: 0 0 10px #b9312f;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    
+    
+}
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    padding: 3%;
+}
+
+
+/* Container for both text and image */
+.education-container {
+    display: flex;
+    flex-direction: row; /* Places text and image side by side */
+    justify-content: center; /* Adds space between the text and the image */
+    gap: 20px;
+    align-items: center; /* Vertically centers the content */
+    padding: 0px; /* Adds some padding around the content */
+    
+}
+
+/* Text styling for the left side */
+.education-text {
+    flex: 1; /* Takes up available space */
+    margin-right: 20px; /* Adds space between the text and the image */
+    font-size: large;
+}
+
+/* Image styling for the right side */
+.univ-img img {
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 4px 8px #b9312f;
+    
+    width: 200px; /* Sets image width */
+    height: 200px; /* Sets image height */
+    object-fit: cover; /* Ensures image fits inside the rounded shape */
+}
+.hon-awards {
+    border-radius: 10px;
+    box-shadow: 0 0 10px #b9312f;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+.hon-awards dl {
+    font-size: 30px;
+    box-shadow: 0 0 10px #b9312f;
+    padding: 20%;
+}
+
+.container-skills-list {
+    border-radius: 10px; 
+}
+
+.container-inside-container-skills-list {
+    border-radius: 10px;
+    box-shadow: 0 0 10px #b9312f;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+    color: #185e7d;
+    text-shadow: 1px 1px 1px #b9312f; /* Red shadow effect on text */
+    
+}
+.skills-list h2 {
+    color: #185e7d;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #b9312f;
+    
+}
+.skill-category {
+    margin: 20px;
+    padding: 20px;
+   
+    
+    border-radius: 10px; 
+    box-shadow: 0 0 10px #b9312f;
+    flex-direction: row;
+    background-color: #06101a;
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-icons img {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #b9312f;
+    background-color: #185e7d;
+}
+
+/* Leadership and Experience */
+.container-lead-exp {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lead-exp {
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px #b9312f;
+    padding: 3%;
+    margin: 3%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+.lead-exp-description {
+    border-radius: 10px;
+   
+    box-shadow: 0 0 10px #b9312f;
+    padding: 3%;
+}
+.projects {
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px #b9312f;
+    box-shadow: 0 0 10px #b9312f;
+    padding: 3%;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.projects h2 {
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    color: #185e7d;
+    font-size: 50px;
+}
+
+/* Grid layout for three-column layout */
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Adds space between cards */
+    margin: 20px 0;
+}
+
+/* Styling for each card */
+.card {
+    
+    padding: 20px;
+    box-shadow: 0 4px 8px #b9312f; /* Subtle shadow for a card effect */
+    border-radius: 10px;
+    text-align: left;
+    color: #185e7d;
+    
+   
+    
+}
+
+/* Style for project images */
+.project-image {
+    width: 100%; /* Image takes full width of the card */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 10px; /* Optional: rounds the image corners */
+   
+    box-shadow: 0 4px 8px #b9312f; /* Subtle shadow for a card effect */
+}
+
+/* Styling for project headings inside cards */
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #185e7d;
+    text-shadow: 1px 1px 1px #b9312f; /* Red shadow effect on text */
+}
+
+/* Styling for the project details */
+.card ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-shadow: 0.5px 0.5px 0.5px rgb(247, 247, 247); /* Red shadow effect on text */
+
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .three-col {
+        grid-template-columns: 1fr; /* Switches to one column on smaller screens */
+    }
+}
+
 footer {
+
     background-color: #06101a;
     color: #185e7d;
-    height: 30%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+}
+footer a {
+    color: #185e7d;
+}
+.thank-you {
+    
+      font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "EDPT" 100,
+        "EHLT" 12;
 }
